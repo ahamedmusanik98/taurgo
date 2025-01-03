@@ -1,0 +1,92 @@
+/* Register.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    padding: 40px;
+    flex: 1;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.client {
+    background-color: #004d40;
+    color: #fff;
+}
+
+.partner {
+    background-color: #fff;
+    color: #004d40;
+    border: 1px solid #004d40;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register {
+    background-color: #004d40;
+    color: #fff;
+}
+
+p {
+    margin-top: 20px;
+}
+
+a {
+    color: #004d40;
+    text-decoration: none;
+}
+
+.image-container {
+    flex: 1;
+    background: url('../houses.jpg') no-repeat center center;
+    background-size: cover;
+}

@@ -1,77 +1,80 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
+import logoImage from '../taurgo-logo.png';
 
 const LoginPage = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [remember, setRemember] = useState(false);
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        // Handle login logic here
-        console.log('Email:', email);
-        console.log('Password:', password);
-        console.log('Remember:', remember);
+    // Navigate to the registration page
+    const handleRegisterNavigation = () => {
+        navigate("/register");
     };
 
     return (
-        <>
-            <div className="login-container">
-                <div className="login-form">
-                    <img src="logo.png" alt="Taurgo Logo" className="logo" />
-                    <h2>Log in</h2>
-                    <p>Welcome back!</p>
-                    <form onSubmit={handleLogin}>
-                        <div className="input-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your email"
-                                required
-                            />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="password">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Enter your password"
-                                required
-                            />
-                        </div>
-                        <div className="remember-forgot">
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={remember}
-                                    onChange={(e) => setRemember(e.target.checked)}
-                                />
-                                Remember for 30 days
-                            </label>
-                            <a href="/forgot-password">Forgot password</a>
-                        </div>
-                        <button type="submit" className="sign-in-button">Sign in</button>
-                    </form>
-                    <p className="register-link">
-                        Don't have an account? <button onClick={() => navigate('/register')}>Register</button>
-                    </p>
+        <div className="login-container">
+            {/* Login form section */}
+            <div className="login-form">
+                <div className="logo">
+                    <img src={logoImage} alt="Taurgo Logo" className="logo-image" />
                 </div>
-                <div>
+                <h2>Welcome Back!</h2>
+                <p className="subtitle">Log in to your account</p>
 
-                </div>
+                <form>
+                    {/* Email input field */}
+                    <label htmlFor="email" className="input-label">
+                        Email
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        className="input-field"
+                        placeholder="Enter your email"
+                    />
+
+                    {/* Password input field */}
+                    <label htmlFor="password" className="input-label">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        className="input-field"
+                        placeholder="Enter your password"
+                    />
+
+                    {/* Options: Remember me & Forgot password */}
+                    <div className="options">
+                        <label className="checkbox-container">
+                            <input type="checkbox" className="checkbox" />
+                            Remember for 30 days
+                        </label>
+                        <a href="/forgot-password" className="forgot-password-link">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    {/* Sign in button */}
+                    <button type="submit" className="btn">
+                        Sign in
+                    </button>
+                </form>
+
+                {/* Navigation to registration */}
+                <p className="register-prompt">
+                    Don’t have an account?{" "}
+                    <span onClick={handleRegisterNavigation} className="register-link">
+                        Register
+                    </span>
+                </p>
             </div>
-            {/* <div className="image-container">
-                <img src="../houses.jpg" alt="Houses" />
-            </div> */}
-        </>
 
+            {/* Placeholder for an optional image section */}
+            <div className="image-section">
+                {/* You can add an illustration, background, or marketing content here */}
+            </div>
+        </div>
     );
 };
 

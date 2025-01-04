@@ -1,78 +1,97 @@
-import React, { useState } from 'react';
-import './Register.css';
+import React from "react";
+import "./Register.css";
+import logoImage from '../taurgo-logo.png';
+import partnerLogo from '../Rics.jpeg';
 
-const Register = () => {
-    const [form, setForm] = useState({
-        organisation: '',
-        email: '',
-        password: '',
-        repeatPassword: ''
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setForm({
-            ...form,
-            [name]: value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-    };
-
+const RegisterPage = () => {
     return (
-        <div className="container">
-            <div className="form-container">
-                <img src="logo.png" alt="TAURGO" className="logo" />
-                <div className="button-group">
-                    <button className="btn client">Register as Client</button>
-                    <button className="btn partner">Register as Partner</button>
+        <div className="register-container">
+            {/* Registration Form Section */}
+            <div className="register-form">
+                <div className="logo">
+                    <img src={logoImage} alt="Taurgo Logo" className="logo-image" />
                 </div>
-                <h2>Create your account</h2>
-                <form onSubmit={handleSubmit}>
-                    <label>Organisation Reference</label>
+
+                {/* Registration Buttons */}
+                <div className="button-group">
+                    <button className="btn btn-client">Register as Client</button>
+                    <button className="btn btn-partner">Register as Partner</button>
+                </div>
+
+                <h2>Create Your Account</h2>
+
+                <form>
+                    {/* Organisation Reference */}
+                    <label htmlFor="org-reference" className="input-label">
+                        Organisation Reference
+                    </label>
                     <input
                         type="text"
-                        name="organisation"
-                        value={form.organisation}
-                        onChange={handleChange}
+                        id="org-reference"
+                        className="input-field"
                         placeholder="Organisation name"
                     />
-                    <label>Email</label>
+
+                    {/* Email */}
+                    <label htmlFor="email" className="input-label">
+                        Email
+                    </label>
                     <input
                         type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
+                        id="email"
+                        className="input-field"
                         placeholder="Enter your email"
                     />
-                    <label>Password</label>
+
+                    {/* Password */}
+                    <label htmlFor="password" className="input-label">
+                        Password
+                    </label>
                     <input
                         type="password"
-                        name="password"
-                        value={form.password}
-                        onChange={handleChange}
+                        id="password"
+                        className="input-field"
+                        placeholder="Enter your password"
                     />
-                    <label>Repeat Password</label>
+
+                    {/* Repeat Password */}
+                    <label htmlFor="repeat-password" className="input-label">
+                        Repeat Password
+                    </label>
                     <input
                         type="password"
-                        name="repeatPassword"
-                        value={form.repeatPassword}
-                        onChange={handleChange}
+                        id="repeat-password"
+                        className="input-field"
+                        placeholder="Repeat your password"
                     />
-                    <button type="submit" className="btn register">Register</button>
+
+                    {/* Submit Button */}
+                    <button type="submit" className="btn btn-register">
+                        Register
+                    </button>
                 </form>
-                <p>
-                    I have an Account? <a href="/login">Login</a>
+
+                {/* Navigation to Login */}
+                <p className="login-prompt">
+                    Already have an account?{" "}
+                    <a href="/login" className="login-link">
+                        Log in
+                    </a>
                 </p>
+
+                {/* Footer Section */}
+                <div className="footer">
+                    <p>© Taurgo</p>
+                    <img src={partnerLogo} alt="Partner Logo" className="partner-logo" />
+                </div>
             </div>
+
+            {/* Optional Image or Background Section */}
             <div className="image-container">
-                <img src="../houses.jpg" alt="Houses" />
+                {/* Add an image or background here if required */}
             </div>
         </div>
     );
 };
 
-export default Register;
+export default RegisterPage;

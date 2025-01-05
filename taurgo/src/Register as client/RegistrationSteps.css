@@ -62,7 +62,7 @@
 
 }
 
-.no-list {
+.no-liststep {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -88,13 +88,13 @@
     color: #17460da0;
 }
 
-.business-options {
+.business-options1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.business-option {
+.business-optionstep {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
@@ -109,12 +109,12 @@
     background-color: #f0faff;
 }
 
-.actions {
+.actionsstep {
     text-align: center;
     margin-top: 20px;
 }
 
-.next-button {
+.next-buttonstep {
     background-color: #356741;
     color: #fff;
     border: none;
@@ -124,6 +124,6 @@
     cursor: pointer;
 }
 
-.next-button:hover {
+.next-buttonstep:hover {
     background-color: #053310;
 }

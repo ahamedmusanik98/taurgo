@@ -15,7 +15,7 @@
 }
 
 /* Form Container */
-.form-container {
+.form-containerCom {
     max-width: 700px;
     margin: 50px auto;
     padding: 20px;
@@ -34,14 +34,14 @@ h3 {
 }
 
 /* Form Layout */
-.form-row {
+.form-rowCom {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
-.form-group {
+.form-groupCom {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ input[type="text"]:focus {
     flex: 1;
 }
 
-.search-button {
+.search-buttonCom {
     margin-left: 5px;
     padding: 10px 15px;
     background-color: #006400;
@@ -91,7 +91,7 @@ input[type="text"]:focus {
     cursor: pointer;
 }
 
-.search-button:hover {
+.search-buttonCom:hover {
     background-color: #004d00;
 }
 
@@ -103,7 +103,7 @@ input[type="text"]:focus {
 }
 
 /* Buttons */
-.form-buttons {
+.form-buttonsCom {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -118,21 +118,21 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.back-button {
+.back-buttonCom {
     background-color: #ccc;
     color: #333;
 }
 
-.back-button:hover {
+.back-buttonCom:hover {
     background-color: #bbb;
 }
 
-.next-button {
+.next-buttonCom {
     background-color: #006400;
     color: #fff;
 }
 
-.next-button:hover {
+.next-buttonCom:hover {
     background-color: #004d00;
 }
 

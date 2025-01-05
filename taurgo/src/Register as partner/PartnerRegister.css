@@ -1,0 +1,118 @@
+/* Container styling */
+.partner-register-container {
+    display: flex;
+    height: 100vh;
+    
+    width: 100%;
+    flex-direction: row;
+}
+
+.partner-register-form {
+    flex: 1;
+    padding: 7rem;
+
+    /* margin: 10rem; */
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.partner-image-container {
+
+    flex: 2.7;
+    background: url('../houses.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.partner-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Logo styling */
+.partner-logo img {
+    align-content: center;
+    height: 50px;
+    margin-bottom: 0.2rem;
+}
+
+.partner-button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0.2rem;
+}
+
+.partner-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.partner-btn-client {
+
+
+    background-color: #fff;
+    color: #007b5e;
+    border: 1px solid #007b5e;
+    border-radius: 5px;
+    padding: right;
+}
+
+.partner-btn-partner {
+    background-color: #007b5e;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.3rem 0 0.1rem;
+    font-weight: bold;
+}
+
+form input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.1rem;
+}
+
+.partner-btn-register {
+    background-color: #007b5e;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Footer styling */
+.partner-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.partner-footer img {
+    height: 35px;
+}
+
+/* Link styling */
+a {
+    color: #007b5e;
+    text-decoration: none;
+    font-weight: bold;
+}

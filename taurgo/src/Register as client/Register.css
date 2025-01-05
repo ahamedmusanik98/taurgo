@@ -18,7 +18,7 @@
 }
 
 .image-container {
-    flex: 1;
+    flex: 2.7;
     background: url('../houses.jpg') no-repeat center center;
     background-size: cover;
 }
@@ -38,7 +38,7 @@
 
 .button-group {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     margin-bottom: 0.2rem;
 }
 

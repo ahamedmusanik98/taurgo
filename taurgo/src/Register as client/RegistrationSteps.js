@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./RegistrationSteps.css"; // Add CSS for styling
+import "./RegistrationSteps.css"; 
 
 const RegistrationSteps = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);
@@ -19,7 +19,7 @@ const RegistrationSteps = () => {
 
             <div className="steps-header">
                 <ul className="steps-list">
-                    <li className="step active"><span className="numBtn">1</span>
+                    <li className="step active"><span className="numBtnstep">1</span>
                         Select your expertise</li>
                     <li className="step"><span className="numBtn2">2</span> Client Details</li>
                     <li className="step"><span className="numBtn2">3</span> Company address</li>
@@ -38,7 +38,7 @@ const RegistrationSteps = () => {
                     registration process:
                 </p>
 
-                <ol class="no-list">
+                <ol class="no-liststep">
                     <li>
                         <strong>Complete the Registration Form:</strong> Please fill out the
                         required details on the Taurgo registration process. This
@@ -57,9 +57,9 @@ const RegistrationSteps = () => {
 
                 {/* Business Size Selection */}
                 <h3>Select your size of business</h3>
-                <div className="business-options">
+                <div className="business-options1">
                     <div
-                        className={`business-option ${selectedOptions.includes("Individual Agency") ? "selected" : ""
+                        className={`business-optionstep ${selectedOptions.includes("Individual Agency") ? "selected" : ""
                             }`}
                         onClick={() => handleOptionClick("Individual Agency")}
                     >
@@ -83,7 +83,7 @@ const RegistrationSteps = () => {
                     </div>
 
                     <div
-                        className={`business-option ${selectedOptions.includes("Corporate Account") ? "selected" : ""
+                        className={`business-optionstep ${selectedOptions.includes("Corporate Account") ? "selected" : ""
                             }`}
                         onClick={() => handleOptionClick("Corporate Account")}
                     >
@@ -100,7 +100,7 @@ const RegistrationSteps = () => {
                     </div>
 
                     <div
-                        className={`business-option ${selectedOptions.includes("Medium Enterprise") ? "selected" : ""
+                        className={`business-optionstep ${selectedOptions.includes("Medium Enterprise") ? "selected" : ""
                             }`}
                         onClick={() => handleOptionClick("Medium Enterprise")}
                     >
@@ -118,8 +118,8 @@ const RegistrationSteps = () => {
                 </div>
 
                 {/* Next Button */}
-                <div className="actions">
-                    <button className="next-button">Next</button>
+                <div className="actionsstep">
+                    <button className="next-buttonstep">Next</button>
                 </div>
             </div>
         </div>

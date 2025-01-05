@@ -36,8 +36,8 @@
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    align-items: end;
-    width: 20%;
+    float: right;
+    /* Align the button to the right */
 }
 
 .buttonon:hover {

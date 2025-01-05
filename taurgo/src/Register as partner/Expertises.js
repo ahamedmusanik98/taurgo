@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./RegistrationSteps.css"; 
 
-const RegistrationSteps = () => {
+const Expertises = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);
 
     const handleOptionClick = (option) => {
@@ -113,4 +113,4 @@ const RegistrationSteps = () => {
     );
 };
 
-export default RegistrationSteps;
+export default Expertises;

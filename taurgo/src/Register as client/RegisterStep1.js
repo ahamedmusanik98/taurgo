@@ -28,7 +28,7 @@ const RegisterStep1 = () => {
                 </div>
 
             </form>
-            <button className="next-button" type="submit">Next</button>
+           
         </div>
     );
 };

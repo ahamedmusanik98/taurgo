@@ -1,9 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 import logoImage from '../taurgo-logo.png';
 import partnerLogo from '../Rics.jpeg';
 
+
+
+
+
+
 const RegisterPage = () => {
+    const navigate = useNavigate();
+
+    // Navigate to the registration page
+    const handleregisterclientNavigation = () => {
+        navigate("/registerclient");
+    };
+
     return (
         <div className="register-container">
             {/* Registration Form Section */}
@@ -30,6 +43,7 @@ const RegisterPage = () => {
                         id="org-reference"
                         className="input-field"
                         placeholder="Organisation name"
+                        required
                     />
 
                     {/* Email */}
@@ -41,6 +55,7 @@ const RegisterPage = () => {
                         id="email"
                         className="input-field"
                         placeholder="Enter your email"
+                        required
                     />
 
                     {/* Password */}
@@ -52,6 +67,7 @@ const RegisterPage = () => {
                         id="password"
                         className="input-field"
                         placeholder="Enter your password"
+                        required
                     />
 
                     {/* Repeat Password */}
@@ -63,10 +79,11 @@ const RegisterPage = () => {
                         id="repeat-password"
                         className="input-field"
                         placeholder="Repeat your password"
+                        required
                     />
 
                     {/* Submit Button */}
-                    <button type="submit" className="btn btn-register">
+                    <button type="submit" onClick={handleregisterclientNavigation} className="btn btn-register">
                         Register
                     </button>
                 </form>

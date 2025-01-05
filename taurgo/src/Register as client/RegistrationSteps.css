@@ -8,7 +8,6 @@
 .steps-header {
     margin-bottom: 20px;
     margin: auto;
-
 }
 
 .steps-list {
@@ -16,7 +15,6 @@
     border: 2px solid;
     border-radius: 15px;
     border-color: #a7b0a9;
-    justify-items: auto;
     justify-content: space-between;
     list-style: none;
     padding: 10px;
@@ -24,16 +22,13 @@
     margin: auto;
 }
 
-
 .thank {
     font-size: 15px;
     border: 2px solid;
     border-radius: 20px;
     border-color: #42744e;
     padding: 10px;
-
 }
-
 
 .numBtn {
     border: 2px transparent;
@@ -45,7 +40,6 @@
     text-align: center;
     display: inline-block;
     margin-bottom: 5px;
-    display: inline-block;
     line-height: 30px;
 }
 
@@ -56,17 +50,14 @@
     padding: 10px;
     width: 20px;
     height: 20px;
-    display: inline-block;
     text-align: center;
     margin-bottom: 5px;
-
 }
 
 .no-liststep {
     list-style-type: none;
     padding: 0;
     margin: 0;
-
 }
 
 .step {
@@ -100,17 +91,34 @@
     padding: 15px;
     cursor: pointer;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    /* Align checkbox and content vertically */
     gap: 10px;
 }
 
-.business-option.selected {
+.business-optionstep input {
+    margin: 0;
+    width: 20px;
+    /* Set consistent checkbox size */
+    height: 20px;
+    align-self: flex-start;
+    /* Align checkbox with the top of content */
+}
+
+.business-optionstep label {
+    flex: 1;
+    /* Let the label occupy remaining space */
+    margin: 0;
+}
+
+.business-optionstep.selected {
     border-color: #2f5c39;
     background-color: #f0faff;
 }
 
 .actionsstep {
-    text-align: center;
+    text-align: right;
+    /* Align the content to the right */
     margin-top: 20px;
 }
 

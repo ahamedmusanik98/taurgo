@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import './RegisterClientSteps.css';
+import RegisterStep1 from './RegisterStep1';
+import RegistrationSteps from './RegistrationSteps';
+import CompanyAddressForm from './CompanyAddressForm';
+import OnboardingForm from './OnboardingForm';
+import CompanyInformation from './companyInformation';
 
-const RegisterClientSteps = () => {
+
+function RegisterClientSteps() {
     const [currentStep, setCurrentStep] = useState(2);
 
     const handleNext = () => {
@@ -40,62 +46,36 @@ const RegisterClientSteps = () => {
                 ))}
             </div>
 
-            {/* Step-Specific Content */}
+            {currentStep === 1 && (
+                <RegistrationSteps />
+            )}
+
+
             {currentStep === 2 && (
-                <div className="form-section">
-                    <h2>Organisation Details</h2>
-                    <form>
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label htmlFor="companyName">Company Name *</label>
-                                <input
-                                    type="text"
-                                    id="companyName"
-                                    placeholder="Enter company name"
-                                    required
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="fullName">Full Name *</label>
-                                <input
-                                    type="text"
-                                    id="fullName"
-                                    placeholder="Enter full name"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label htmlFor="email">Email *</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="hello@example.com"
-                                    required
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="phone">Phone *</label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    placeholder="Enter phone number"
-                                    required
-                                />
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <RegisterStep1 />
+            )}
+
+            {currentStep === 3 && (
+                <CompanyAddressForm />
+            )}
+
+            {currentStep === 4 && (
+                <CompanyInformation />
+            )}
+
+            {currentStep === 5 && (
+                <OnboardingForm />
             )}
 
             {/* Navigation Controls */}
             <div className="form-navigation">
-                {currentStep > 1 && <button onClick={handlePrevious}>Previous</button>}
+                {currentStep > 1 && currentStep < 5 && (
+                    <button onClick={handlePrevious}>Previous</button>
+                )}
                 {currentStep < 5 && <button onClick={handleNext}>Next</button>}
             </div>
         </div>
     );
-};
+}
 
 export default RegisterClientSteps;

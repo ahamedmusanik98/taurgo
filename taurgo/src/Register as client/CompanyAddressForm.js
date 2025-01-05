@@ -16,34 +16,35 @@ const CompanyAddressForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission
+        console.log({
+            postcode,
+            address1,
+            address2,
+            city,
+            county,
+            country,
+            logo,
+        });
     };
 
     return (
-        <div className="form-containerCom">
-            {/* Progress Bar */}
-            <div className="progress-barCom">
-                <div className="progress-bar-fillCom" style={{ width: '50%' }}></div>
-            </div>
+        <div className="form-container">
             <form className="company-address-form" onSubmit={handleSubmit}>
-                <h2>Step 1/2</h2>
                 <h3>Company address</h3>
-                <div className="form-rowCom">
-                    <div className="form-groupCom">
+                <div className="form-row">
+                    <div className="form-group">
                         <label>Postcode</label>
-                        <div className="input-with-buttonCom">
+                        <div className="input-with-button">
                             <input
                                 type="text"
                                 value={postcode}
                                 onChange={(e) => setPostcode(e.target.value)}
                                 placeholder="Search postcode"
                             />
-                            <button type="button" className="search-buttonCom">
-                                🔍
-                            </button>
+                            <button type="button" className="search-button">🔍</button>
                         </div>
                     </div>
-                    <div className="form-groupCom">
+                    <div className="form-group">
                         <label>Address Line 1</label>
                         <input
                             type="text"
@@ -53,8 +54,8 @@ const CompanyAddressForm = () => {
                         />
                     </div>
                 </div>
-                <div className="form-rowCom">
-                    <div className="form-groupCom">
+                <div className="form-row">
+                    <div className="form-group">
                         <label>Address Line 2</label>
                         <input
                             type="text"
@@ -63,7 +64,7 @@ const CompanyAddressForm = () => {
                             placeholder="Address 2"
                         />
                     </div>
-                    <div className="form-groupCom">
+                    <div className="form-group">
                         <label>Town/City</label>
                         <input
                             type="text"
@@ -73,8 +74,8 @@ const CompanyAddressForm = () => {
                         />
                     </div>
                 </div>
-                <div className="form-rowCom">
-                    <div className="form-groupCom">
+                <div className="form-row">
+                    <div className="form-group">
                         <label>County</label>
                         <input
                             type="text"
@@ -83,7 +84,7 @@ const CompanyAddressForm = () => {
                             placeholder="County"
                         />
                     </div>
-                    <div className="form-groupCom">
+                    <div className="form-group">
                         <label>Country</label>
                         <input
                             type="text"
@@ -93,21 +94,12 @@ const CompanyAddressForm = () => {
                         />
                     </div>
                 </div>
-                <div className="form-groupCom">
+                <div className="form-group">
                     <label>Upload company logo here</label>
                     <input type="file" accept=".png" onChange={handleFileUpload} />
-                    <small className="tooltip">
-                        This will be used to brand all our projects with. Upload logo in (.png) format.
-                    </small>
+                    <small>This will be used to brand all our projects with. Upload logo in (.png) format.</small>
                 </div>
-                <div className="form-buttonsCom">
-                    <button type="button" className="back-buttonCom">
-                        Go Back
-                    </button>
-                    <button type="submit" className="next-buttonCom">
-                        Next
-                    </button>
-                </div>
+               
             </form>
         </div>
     );

@@ -1,0 +1,35 @@
+.sidebar {
+    width: 250px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item:hover,
+.nav-item a:hover {
+    background-color: #ddd;
+}

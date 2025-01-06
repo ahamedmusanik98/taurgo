@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logoImage from '../taurgo-logo.png';
+import partnerLogo from '../Rics.jpeg';
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -9,6 +10,11 @@ const LoginPage = () => {
     // Navigate to the registration page
     const handleRegisterNavigation = () => {
         navigate("/register");
+    };
+
+
+    const handleDashboardNavigation = () => {
+        navigate("/dashboard");
     };
 
     return (
@@ -56,7 +62,7 @@ const LoginPage = () => {
                     </div>
 
                     {/* Sign in button */}
-                    <button type="submit" className="btn">
+                    <button onClick={handleDashboardNavigation}type="submit" className="btn">
                         Sign in
                     </button>
                 </form>
@@ -68,7 +74,13 @@ const LoginPage = () => {
                         Register
                     </span>
                 </p>
+                <div className="footer">
+                    <p>© Taurgo</p>
+                    <img src={partnerLogo} alt="Partner Logo" className="partner-logo" />
+                </div>
+
             </div>
+          
 
             {/* Placeholder for an optional image section */}
             <div className="image-section">

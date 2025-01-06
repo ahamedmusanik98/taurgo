@@ -17,6 +17,10 @@ const RegisterPage = () => {
         navigate("/registerclient");
     };
 
+    const handlePartnerRegisterPageNavigation = () => {
+        navigate("/PartnerRegisterPage");
+    };
+
     return (
         <div className="register-container">
             {/* Registration Form Section */}
@@ -28,7 +32,7 @@ const RegisterPage = () => {
                 {/* Registration Buttons */}
                 <div className="button-group">
                     <button className="btn btn-client">Register as Client</button>
-                    <button className="btn btn-partner">Register as Partner</button>
+                    <button onClick={handlePartnerRegisterPageNavigation} className="btn btn-partner">Register as Partner</button>
                 </div>
 
                 <h2>Create Your Account</h2>

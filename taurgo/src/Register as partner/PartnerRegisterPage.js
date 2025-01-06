@@ -1,9 +1,22 @@
 import React from "react";
 import "./PartnerRegister.css";
+import { useNavigate } from "react-router-dom";
 import partnerLogoImage from '../taurgo-logo.png';
 import partnerPartnerLogo from '../Rics.jpeg';
 
 const PartnerRegisterPage = () => {
+
+    const navigate = useNavigate();
+
+    const handleRegisterPartnerStepsNavigation = () => {
+        navigate("/RegisterPartnerSteps");
+    };
+    
+    const handleRegisterNavigation = () => {
+        navigate("/Register");
+    };
+
+
     return (
         <div className="partner-register-container">
             <div className="partner-register-form">
@@ -11,7 +24,7 @@ const PartnerRegisterPage = () => {
                     <img src={partnerLogoImage} alt="Taurgo Logo" className="partner-logo-image" />
                 </div>
                 <div className="partner-button-group">
-                    <button className="partner-btn partner-btn-client">Register as Client</button>
+                    <button onClick={handleRegisterNavigation} className="partner-btn partner-btn-client">Register as Client</button>
                     <button className="partner-btn partner-btn-partner">Register as Partner</button>
                 </div>
                 <h2>Create Your Account</h2>
@@ -24,7 +37,7 @@ const PartnerRegisterPage = () => {
                     <input type="password" id="partner-password" className="partner-input-field" placeholder="Enter your password" />
                     <label htmlFor="partner-repeat-password" className="partner-input-label">Repeat Password</label>
                     <input type="password" id="partner-repeat-password" className="partner-input-field" placeholder="Repeat your password" />
-                    <button type="submit" className="partner-btn partner-btn-register">Register</button>
+                    <button type="submit" onClick={handleRegisterPartnerStepsNavigation} className="partner-btn partner-btn-register">Register</button>
                 </form>
                 <p className="partner-login-prompt">
                     Already have an account?{" "}

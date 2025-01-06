@@ -1,7 +1,7 @@
 import React from "react";
 import "./ThankYouPage.css";
-import image from "../taurgo-logo.png";
-import thank from "../thank.png";
+import image from "./taurgo-logo.png";
+import thank from "./thank.png";
 
 const ThankYouPage = () => {
     return (

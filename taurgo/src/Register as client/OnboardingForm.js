@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./OnboardingForm.css"; // Import the CSS file
 
 const OnboardingForm = () => {
+
+    const navigate = useNavigate();
+
+    const handleThankYouPageNavigation = () => {
+        navigate("/ThankYouPage");
+    };
     return (
         <div className="container">
             <h2 className="heading">Onboarding Form Complete</h2>
@@ -21,7 +28,7 @@ const OnboardingForm = () => {
                 confirmation email. Please check your inbox (and spam folder) for this
                 confirmation.
             </p>
-            <button className="buttonon">Finish</button>
+            <button className="buttonon" onClick={handleThankYouPageNavigation}>Finish</button>
         </div>
     );
 };

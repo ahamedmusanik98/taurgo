@@ -1,6 +1,8 @@
 .musanik-professional-details-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 30px;
+
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -40,7 +42,7 @@
 .musanik-upload-icon {
     font-size: 1.5rem;
     margin-right: 10px;
-    color:#2f9962;
+    color: #2f9962;
 }
 
 .musanik-upload-text {
@@ -62,12 +64,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 2px;
-    
+    /* gap: 10px; */
+
 }
 
 .musanik-checkbox {
-margin-right: 5px;
+    margin-left: 10px;
 }
 
 .musanik-checkbox-label {

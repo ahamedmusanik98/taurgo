@@ -10,8 +10,16 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 25px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
+h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #035C59;
+}
 
 .input-group {
     display: flex;
@@ -64,8 +72,9 @@ textarea {
 
 .checkbox-group label,
 .radio-group label {
-    display: flex;
+    /* display: flex; */
     align-items: flex-start;
+  
     gap: 10px;
     font-size: 14px;
     line-height: 1.4;
@@ -74,12 +83,13 @@ textarea {
 .checkbox-group textarea {
     margin-top: 10px;
     margin-left: 25px;
+    /* Align textarea under the "Other" label */
 }
 
 input[type="checkbox"],
 input[type="radio"] {
     accent-color: #035C59;
-    margin-top: 3px;
+    margin: 0;
     transform: scale(1.2);
 }
 

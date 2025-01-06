@@ -7,7 +7,8 @@ import Register from './Register as client/Register';
 import RegisterClientSteps from './Register as client/RegisterClientSteps';
 
 import PartnerRegisterPage from './Register as partner/PartnerRegisterPage';
-import ThankYouPage from './Register as client/ThankYouPage';
+import PersonalDetails from './Register as partner/PersonalDetails';
+
 
 
 
@@ -21,7 +22,7 @@ function App() {
        
         <Route path="/registerclient" element={<RegisterClientSteps />} />
         <Route path="/PartnerRegisterPage" element={<PartnerRegisterPage />} />
-
+        <Route path="/PersonalDetails" element={<PersonalDetails />} />
       </Routes>
     </Router>
   );

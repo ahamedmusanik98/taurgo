@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import './RegisterClientSteps.css';
-import RegisterStep1 from './RegisterStep1';
-import RegistrationSteps from './RegistrationSteps';
-import CompanyAddressForm from './CompanyAddressForm';
-import OnboardingForm from './OnboardingForm';
-import CompanyInformation from './companyInformation';
+import '../Register as client//RegisterClientSteps.css';
+import Expertises from './Expertises';
+import PersonalDetails from './PersonalDetails';
+import ProfessionalDetails from './ProfessionalDetails';
+import CurrentAddressForm from './CurrentAddressForm';
+import OnboardingFormPartner from './OnboardingFormPartner';
 
 
-function RegisterClientSteps() {
+
+function RegisterPartnerSteps() {
     const [currentStep, setCurrentStep] = useState(1);
 
     const handleNext = () => {
@@ -19,9 +20,9 @@ function RegisterClientSteps() {
     };
 
     const stepLabels = [
-        'Select your expertise',
-        'Client Details',
-        'Company address',
+        'Select your expertises',
+        'Personals Details',
+        'Professional Details',
         'Fit to work',
         'Onboarding Complete',
     ];
@@ -47,24 +48,24 @@ function RegisterClientSteps() {
             </div>
 
             {currentStep === 1 && (
-                <RegistrationSteps />
+                <Expertises />
             )}
 
 
             {currentStep === 2 && (
-                <RegisterStep1 />
+                <PersonalDetails />
             )}
 
             {currentStep === 3 && (
-                <CompanyAddressForm />
+                <CurrentAddressForm />
             )}
 
             {currentStep === 4 && (
-                <CompanyInformation />
+                <ProfessionalDetails />
             )}
 
             {currentStep === 5 && (
-                <OnboardingForm />
+                <OnboardingFormPartner />
             )}
 
             {/* Navigation Controls */}
@@ -78,4 +79,4 @@ function RegisterClientSteps() {
     );
 }
 
-export default RegisterClientSteps;
+export default RegisterPartnerSteps;

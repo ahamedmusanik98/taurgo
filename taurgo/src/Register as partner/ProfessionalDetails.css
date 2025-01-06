@@ -1,0 +1,76 @@
+.musanik-professional-details-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.musanik-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.musanik-upload-section {
+    margin-bottom: 20px;
+}
+
+.musanik-label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+.musanik-upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #a5a5a5;
+    border-radius: 6px;
+    height: 100px;
+    background-color: #abedd9;
+    cursor: pointer;
+    position: relative;
+}
+
+.musanik-upload-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color:#2f9962;
+}
+
+.musanik-upload-text {
+    font-size: 1rem;
+    color: #2f9984;
+}
+
+.musanik-file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.musanik-checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+    
+}
+
+.musanik-checkbox {
+margin-right: 5px;
+}
+
+.musanik-checkbox-label {
+    font-size: 1rem;
+    color: #555555;
+}

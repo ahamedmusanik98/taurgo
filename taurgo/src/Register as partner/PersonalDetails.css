@@ -51,8 +51,23 @@
 }
 
 .personal-input-file {
-    border: 1px dashed #ccc;
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #007bff;
+    /* Updated Border Style */
+    border-radius: 5px;
     background-color: #f9f9f9;
+    color: #555;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.personal-input-file:focus {
+    border-color: #0056b3;
+    /* Focus color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
 }
 
 .personal-input:focus,

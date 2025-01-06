@@ -62,7 +62,7 @@ const LoginPage = () => {
                     </div>
 
                     {/* Sign in button */}
-                    <button onClick={handleDashboardNavigation}type="submit" className="btn">
+                    <button onClick={handleDashboardNavigation} type="submit" className="btn">
                         Sign in
                     </button>
                 </form>
@@ -80,7 +80,7 @@ const LoginPage = () => {
                 </div>
 
             </div>
-          
+
 
             {/* Placeholder for an optional image section */}
             <div className="image-section">

@@ -4,6 +4,7 @@ import "./Dashboard.css";
 import Sidebar from "./Sidebar";
 import AvailableProjects from "./AvailableProjects";
 import EmptyPage from "./EmptyPage";
+import MyProjects from "./MyProjects";
 
 const Dashboard = () => {
     const [currentPage, setCurrentPage] = useState("available-projects");
@@ -14,7 +15,7 @@ const Dashboard = () => {
                 return <AvailableProjects />;
             case "my-projects":
                 return (
-                    <EmptyPage
+                    <MyProjects
                         title="My Projects"
                         goBack={() => setCurrentPage("available-projects")}
                     />
